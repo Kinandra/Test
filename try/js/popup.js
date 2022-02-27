@@ -16,6 +16,11 @@ $('#run_code').click(e => {
 	runCode($('#code_to_run')[0].value);
 });
 
+$('#run_content_code').click(e => {
+	runContentCode($('#code_to_run')[0].value);
+});
+
+
 // 打开后台页
 $('#open_background').click(e => {
 	window.open(chrome.extension.getURL('background.html'));
@@ -215,5 +220,10 @@ $('#check_media').click(e => {
 });
 
 function runCode(code) {
+	// executeScriptToCurrentTab(code);
 	sendMessageToContentScript({ cmd: "code", content: code });
+}
+
+function runContentCode(code) {
+	sendMessageToContentScript({ cmd: "content_code", content: code });
 }
