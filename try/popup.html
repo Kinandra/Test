@@ -15,6 +15,16 @@
 		a {
 			margin-right: 10px;
 		}
+
+		button {
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 8px;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			background: rgb(55, 113, 171);
+		}
 	</style>
 </head>
 
@@ -22,8 +32,10 @@
 	<h1>这是一个popup页面！</h1>
 	<h2>功能</h2>
 	<div>
+
 		<input type="text" name="code" id="code_to_run"></input>
-		<button id="run_code"> run </button>
+		<button id="run_code"> run1 </button>
+		<button id="run_content_code"> run2 </button>
 	</div>
 	<h2>background</h2>
 	<div>
@@ -57,10 +69,6 @@
 	<div>
 		<a href="#" id="update_bg_color">修改页面背景色(通过executeScript实现)</a>
 		<a href="#" id="update_font_size">修改字体大小(通过sendMessage实现)</a>
-	</div>
-	<h2>国际化演示</h2>
-	<div>
-		<p><span id="test_i18n"></span> (另外请到插件列表页查看描述的变化)</p>
 	</div>
 	<h2>其它</h2>
 	<div>
